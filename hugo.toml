@@ -1,0 +1,17 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Paul Smurthwaite | Cloud Resume"
+theme = "hugo-resume"
+
+[params]
+    firstName = "Paul"
+    lastName = "Smurthwaite"
+    address = "Forres, Scotland"
+    phone = ""
+    email = "your-email@example.com"
+    # The theme uses these for the sidebar/header
+    linkedin = "paulsmurthwaite"
+    github = "paulsmurthwaite"
+    
+[params.profile]
+    summary = "Senior Infrastructure Engineer | Azure Cloud Engineer | Veteran. Focused on Hybrid Cloud and Automation."
