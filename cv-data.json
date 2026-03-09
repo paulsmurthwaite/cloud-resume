@@ -1,0 +1,65 @@
+{
+  "info": {
+    "name": "Paul Smurthwaite",
+    "title": "Senior Infrastructure Engineer | Azure Cloud Engineer (Candidate) | Wintel & Hybrid Systems Specialist | BSc (Hons) Cyber Security | Veteran",
+    "location": "Forres, Scotland, United Kingdom",
+    "about": "Technical leader with extensive experience implementing, securing, and optimising enterprise-scale infrastructure. Career progression from hands-on systems engineering and business ownership to directing 24/7 operations for mission-critical estates.
+
+Committed to ethical standards and accountability. Expert in ensuring technical delivery meets specification and budget requirements while maintaining operational speed. Proven track record in streamlining operations and resource allocation, automating workflows, and maintaining standards compliance.
+
+Core Expertise:
+● Hybrid Infrastructure: Expert-level oversight of Wintel, *NIX (RHEL/SLES), and VMware vSphere environments.
+● Operational Scale: Managed diverse portfolios for CNI clients including the Ministry of Defence, EDF Energy, and Heathrow Airport.
+● Data & Automation: Driving efficiency through Power Query (M), Runbook Automation (RBA), and process optimisation.
+● Governance & Security: Experienced in ITIL-aligned Operations Delivery, Service Improvement, Service Transition (Project-to-Run), and Risk/Compliance within security-cleared environments.
+
+Currently focused on transitioning to Azure Hybrid Cloud, integrating established infrastructure experience with modern cloud-native implementation and automation techniques.",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/paulsmurthwaite/",
+      "github": "https://github.com/paulsmurthwaite",
+      "pdf": "/assets/cv.pdf"
+    }
+  },
+  "skills": {
+    "cloud": ["Azure"],
+    "iac": ["Bicep", "Terraform", "ARM Templates"],
+    "devops": ["GitHub Actions"],
+    "security_networking": ["WSTT", "VNETs", "NSGs", "Sentinel"]
+  },
+  "certifications": {
+    "education": ["BSc (Hons) Cyber Security"],
+    "active": ["AZ-900", "AZ-800"],
+    "in_progress": ["AZ-305"]
+  },
+  "experience": [
+    {
+      "role": "Azure & Cloud Infrastructure Engineer (Technical R&D)",
+      "company": "Self-Directed / Professional Development",
+      "location": "Forres, Onsite",
+      "dates": "September 2025 - Present",
+      "details": "● Hybrid Cloud: Architect and implement the integration of legacy on-premises Windows Server and Linux environments with Azure Cloud services; leveraging Azure Arc to extend Azure management, governance, and security across distributed hybrid estates.
+● Azure Modernisation: Developing expertise across the Azure infrastructure curricula, simulating the migration of enterprise-scale on-premises workloads to Azure-native solutions.
+● Infrastructure as Code (IaC): Leveraging Terraform and PowerShell to automate the deployment and configuration of hybrid cloud resources, ensuring consistency and scalability.
+● Architecture Design: Bridging extensive infrastructure delivery experience with modern cloud design patterns to provide high-availability and cost-optimised digital services."
+    },
+    {
+      "role": "BSc (Hons) Cyber Security University Student",
+      "company": "The Open University",
+      "location": "Milton Keynes, Remote",
+      "dates": "October 2019 - September 2025",
+      "details": "● BSc (Hons) Cyber Security, focused on developing expertise in areas such as:
+    - Communications Technologies and Web Technologies: Developed expertise in Communication and Web Technologies, including Cisco Switching, Routing, Wireless Networking, and Enterprise Networking & Automation.
+    - Information Security Governance, Risk, and Compliance: Focused on Information Security Governance, Risk, and Compliance (GRC), aligning technical controls with organisational security frameworks.
+    - Cyber Security, Systems Penetration Testing, and Network Security: Specialised in Systems Penetration Testing, Network Security, and Cyber Security methodologies to identify and mitigate infrastructure vulnerabilities.
+
+● Final Year Project: Advancing Wireless Network Security: A Modern Toolkit for SMEs and IT Professionals
+    - Objective: Designed a modern security toolkit for SME and IT professionals focused on wireless assessment and detection.
+    - Development: Built a modular CLI toolkit utilizing Bash & Python to automate security workflows.
+    - Methodology: Integrated ethical, evidence-driven design practices with virtual lab configurations and open-source tool orchestration.
+
+● Result:
+BSc (Honours) Cyber Security with First Class Honours"
+    }
+    // ... repeat for all 10
+  ]
+}

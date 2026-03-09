@@ -1,31 +1,44 @@
-<main id="cv-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Smurthwaite | Cloud & Infrastructure Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
     <header class="cv-header">
-        <h1>Paul Smurthwaite</h1>
-        <p class="subtitle">Cloud & Infrastructure Engineer</p>
-        <div class="contact-links"> </div>
+        <h1 id="user-name">Loading...</h1>
+        <p id="user-title" class="subtitle"></p>
+        <div id="contact-links" class="links"></div>
     </header>
 
-    <section id="summary">
-        <h2>Professional Profile</h2>
-        <p></p>
-    </section>
+    <main id="cv-container">
+        <section id="about-section">
+            <h2>Professional Profile</h2>
+            <p id="about-text"></p>
+        </section>
 
-    <section id="skills">
-        <h2>Technical Toolkit</h2>
-        <div class="skills-grid">
-            <div class="skill-category"><h3>Cloud</h3><ul>...</ul></div>
-            <div class="skill-category"><h3>DevOps</h3><ul>...</ul></div>
-        </div>
-    </section>
+        <section id="skills-section">
+            <h2>Technical Skills</h2>
+            <div id="skills-container" class="skills-grid">
+                </div>
+        </section>
 
-    <section id="experience">
-        <h2>Professional Experience</h2>
-        <article class="job">
-            <header>
-                <span class="job-title">Senior Engineer</span>
-                <span class="date">2023 - Present</span>
-            </header>
-            <ul class="achievements"> </ul>
-        </article>
-    </section>
-</main>
+        <section id="experience-section">
+            <h2>Professional Experience</h2>
+            <div id="experience-container">
+                <p>Loading professional history...</p>
+            </div>
+        </section>
+
+        <section id="certs-section">
+            <h2>Certifications & Education</h2>
+            <div id="certs-container"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
