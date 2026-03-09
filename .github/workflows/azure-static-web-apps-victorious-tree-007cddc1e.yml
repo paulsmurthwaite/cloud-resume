@@ -16,9 +16,14 @@ jobs:
     name: Build and Deploy Job
     steps:
       - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          submodules: true
-          lfs: false
+          python-version: '3.x'
+      - name: Install Markdown Library
+        run: pip install markdown
+      - name: Build HTML from Markdown
+        run: python build.py
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
