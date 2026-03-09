@@ -16,14 +16,6 @@ jobs:
     name: Build and Deploy Job
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-      - name: Install Markdown Library
-        run: pip install markdown
-      - name: Build HTML from Markdown
-        run: python build.py
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -35,8 +27,7 @@ jobs:
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
-          output_location: "." # Default
-          skip_app_build: true
+          output_location: "" # Default
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
