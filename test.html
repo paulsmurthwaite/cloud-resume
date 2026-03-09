@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Smurthwaite | Cloud & Infrastructure Engineer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <style>
+        :root { --pico-font-size: 16px; }
+        header.cv-header { text-align: center; padding: 3rem 0; }
+        .links { margin-top: 1rem; }
+        .job-entry header { background: #f8f9fa; padding: 1rem; margin: -1rem -1rem 1rem -1rem; border-radius: calc(var(--pico-border-radius) * 1) calc(var(--pico-border-radius) * 1) 0 0; }
+        h2 { border-bottom: 2px solid var(--pico-primary); padding-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+
+    <header class="container cv-header">
+        <hgroup>
+            <h1>Paul Smurthwaite</h1>
+            <p>Senior Infrastructure Engineer | Azure Cloud Engineer | Wintel & Hybrid Systems Specialist | Veteran</p>
+        </hgroup>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/paulsmurthwaite/" target="_blank" class="contrast">LinkedIn</a> • 
+            <a href="https://github.com/paulsmurthwaite" target="_blank" class="contrast">GitHub</a> • 
+            <a href="/assets/cv.pdf" class="contrast">Download PDF</a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section id="profile">
+            <h2>Professional Profile</h2>
+            <p>Technical leader with extensive experience implementing, securing, and optimising enterprise-scale infrastructure. Career progression from hands-on systems engineering and business ownership to directing 24/7 operations for mission-critical estates.</p>
+            <p>Currently focused on transitioning to Azure Hybrid Cloud, integrating established infrastructure experience with modern cloud-native implementation and automation techniques.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="grid">
+                <div>
+                    <strong>Cloud & DevOps</strong><br>
+                    Azure, GitHub Actions, Terraform, Bicep
+                </div>
+                <div>
+                    <strong>Legacy & Hybrid</strong><br>
+                    Windows Server, AD, Group Policy, Hyper-V
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            
+            <article class="job-entry">
+                <header>
+                    <hgroup>
+                        <h3>Azure & Cloud Infrastructure Engineer</h3>
+                        <p><strong>Self-Directed</strong> | Sept 2025 - Present</p>
+                    </hgroup>
+                </header>
+                <ul>
+                    <li><strong>Hybrid Cloud:</strong> Architect and implement the integration of legacy Windows Server/Linux with Azure services via <strong>Azure Arc</strong>.</li>
+                    <li><strong>Azure Modernisation:</strong> Simulating migration of enterprise-scale on-premises workloads to Azure-native solutions.</li>
+                    <li><strong>IaC:</strong> Leveraging <strong>Terraform</strong> and PowerShell to automate deployment of hybrid resources.</li>
+                </ul>
+            </article>
+
+            <article class="job-entry">
+                <header>
+                    <hgroup>
+                        <h3>BSc (Hons) Cyber Security</h3>
+                        <p><strong>The Open University</strong> | 2019 - 2025</p>
+                    </hgroup>
+                </header>
+                <strong>First Class Honours</strong>
+                <ul>
+                    <li>Specialised in Cisco Routing/Switching, GRC frameworks, and Systems Penetration Testing.</li>
+                    <li><strong>Final Year Project:</strong> Designed a modular security toolkit for SMEs using <strong>Bash & Python</strong> to automate wireless security workflows.</li>
+                </ul>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="container">
+        <small><center>Built with HTML & Pico.css • Hosted on Azure Static Web Apps</center></small>
+    </footer>
+
+</body>
+</html>
