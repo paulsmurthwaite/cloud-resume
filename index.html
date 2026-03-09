@@ -1,105 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paul Smurthwaite | Cloud Platform Engineer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        body { background-color: #0b1120; color: #f8fafc; }
-        .bento-card { 
-            background: rgba(30, 41, 59, 0.7); 
-            border: 1px solid rgba(51, 65, 85, 0.5); 
-            backdrop-filter: blur(10px);
-            border-radius: 1.5rem;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-        .bento-card:hover { 
-            transform: translateY(-5px);
-            border-color: #3b82f6; /* Azure Blue */
-        }
-        .azure-glow { text-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
-    </style>
-</head>
-<body class="p-4 md:p-8">
+<main id="cv-container">
+    <header class="cv-header">
+        <h1>Paul Smurthwaite</h1>
+        <p class="subtitle">Cloud & Infrastructure Engineer</p>
+        <div class="contact-links"> </div>
+    </header>
 
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4">
-        
-        <div class="md:col-span-3 bento-card p-8 flex flex-col justify-center">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-2 azure-glow">Paul Smurthwaite</h1>
-            <p class="text-xl text-blue-400 font-medium mb-4 italic">Cloud Platform Engineer | Infrastructure Specialist</p>
-            <p class="text-slate-400 max-w-2xl leading-relaxed">
-                Dynamic and highly motivated IT professional with a proven track record in cloud architecture, 
-                infrastructure engineering, and DevOps automation. Specializing in Azure platforms, 
-                Terraform (IaC), and seamless CI/CD pipeline management.
-            </p>
+    <section id="summary">
+        <h2>Professional Profile</h2>
+        <p></p>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Toolkit</h2>
+        <div class="skills-grid">
+            <div class="skill-category"><h3>Cloud</h3><ul>...</ul></div>
+            <div class="skill-category"><h3>DevOps</h3><ul>...</ul></div>
         </div>
+    </section>
 
-        <div class="bento-card p-8 flex flex-col justify-around text-center">
-            <a href="https://linkedin.com/in/paulsmurthwaite" class="text-blue-400 hover:text-white text-3xl transition-colors"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/paulsmurthwaite" class="text-blue-400 hover:text-white text-3xl transition-colors"><i class="fab fa-github"></i></a>
-            <a href="mailto:your-email@example.com" class="text-blue-400 hover:text-white text-3xl transition-colors"><i class="fas fa-envelope"></i></a>
-            <p class="text-xs uppercase tracking-widest text-slate-500 mt-4 font-bold">Connect</p>
-        </div>
-
-        <div class="md:col-span-1 bento-card p-6">
-            <h3 class="text-blue-400 font-bold mb-4 flex items-center"><i class="fas fa-microchip mr-2"></i> Tech Stack</h3>
-            <div class="flex flex-wrap gap-2 text-sm">
-                <span class="bg-blue-900/40 text-blue-200 px-3 py-1 rounded-full">Azure</span>
-                <span class="bg-blue-900/40 text-blue-200 px-3 py-1 rounded-full">Terraform</span>
-                <span class="bg-blue-900/40 text-blue-200 px-3 py-1 rounded-full">GitHub Actions</span>
-                <span class="bg-blue-900/40 text-blue-200 px-3 py-1 rounded-full">PowerShell</span>
-                <span class="bg-blue-900/40 text-blue-200 px-3 py-1 rounded-full">Kubernetes</span>
-                <span class="bg-blue-900/40 text-blue-200 px-3 py-1 rounded-full">Docker</span>
-            </div>
-        </div>
-
-        <div class="md:col-span-3 bento-card p-8">
-            <h3 class="text-blue-400 font-bold mb-6 text-xl">Work Experience</h3>
-            <div class="space-y-8">
-                <div>
-                    <div class="flex justify-between items-start mb-1">
-                        <h4 class="font-bold text-lg">Cloud Engineer (Platform)</h4>
-                        <span class="text-sm text-slate-500">Present</span>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-2 italic">Infrastructure & Platform Services</p>
-                    <p class="text-slate-300 text-sm leading-relaxed">Designing and managing secure, scalable Azure cloud solutions using Terraform. Lead on CI/CD pipeline optimization and automation for platform consistency.</p>
-                </div>
-                <div class="border-l border-blue-900/50 pl-4">
-                    <div class="flex justify-between items-start mb-1">
-                        <h4 class="font-bold text-lg">Infrastructure Engineer</h4>
-                        <span class="text-sm text-slate-500">2021 - 2023</span>
-                    </div>
-                    <p class="text-slate-300 text-sm leading-relaxed">Transitioned traditional on-prem workloads to Azure. Focused on high-availability and disaster recovery planning.</p>
-                </div>
-                <div class="border-l border-blue-900/50 pl-4">
-                    <h4 class="font-bold text-lg">Service Desk Analyst</h4>
-                    <p class="text-slate-300 text-sm leading-relaxed">Resolved complex technical issues while maintaining high SLA standards and improving internal documentation.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="md:col-span-2 bento-card p-6">
-            <h3 class="text-blue-400 font-bold mb-4 flex items-center"><i class="fas fa-certificate mr-2"></i> Certifications</h3>
-            <ul class="text-sm space-y-3 text-slate-300">
-                <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> AZ-104: Azure Administrator</li>
-                <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> AZ-400: Azure DevOps Engineer</li>
-                <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Terraform Associate (HashiCorp)</li>
-            </ul>
-        </div>
-
-        <div class="md:col-span-2 bento-card p-6 bg-gradient-to-br from-blue-900/20 to-transparent">
-            <h3 class="text-blue-400 font-bold mb-2">Cloud Resume Project</h3>
-            <p class="text-sm text-slate-300 mb-4">You are looking at it. Built with HTML5, Tailwind CSS, and hosted via Azure Static Web Apps using GitHub Actions for CI/CD.</p>
-            <a href="https://github.com/paulsmurthwaite/cloud-resume" class="text-xs font-bold uppercase text-blue-400 hover:underline">View Source Code →</a>
-        </div>
-
-    </div>
-
-    <footer class="mt-12 text-center text-slate-600 text-sm italic">
-        Powered by Azure Static Web Apps & GitHub Actions
-    </footer>
-
-</body>
-</html>
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        <article class="job">
+            <header>
+                <span class="job-title">Senior Engineer</span>
+                <span class="date">2023 - Present</span>
+            </header>
+            <ul class="achievements"> </ul>
+        </article>
+    </section>
+</main>
