@@ -3,129 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paul Smurthwaite | Cloud Engineer Portfolio</title>
+    <title>Paul Smurthwaite | Cloud Platform Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #0b1120; color: #f8fafc; }
+        .bento-card { 
+            background: rgba(30, 41, 59, 0.7); 
+            border: 1px solid rgba(51, 65, 85, 0.5); 
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .bento-card:hover { 
+            transform: translateY(-5px);
+            border-color: #3b82f6; /* Azure Blue */
+        }
+        .azure-glow { text-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans">
+<body class="p-4 md:p-8">
 
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold tracking-tight text-blue-600">Paul Smurthwaite</h1>
-            <nav class="space-x-6 text-sm font-medium text-slate-600">
-                <a href="#about" class="hover:text-blue-600 transition">About</a>
-                <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
-                <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
-            </nav>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4">
+        
+        <div class="md:col-span-3 bento-card p-8 flex flex-col justify-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-2 azure-glow">Paul Smurthwaite</h1>
+            <p class="text-xl text-blue-400 font-medium mb-4 italic">Cloud Platform Engineer | Infrastructure Specialist</p>
+            <p class="text-slate-400 max-w-2xl leading-relaxed">
+                Dynamic and highly motivated IT professional with a proven track record in cloud architecture, 
+                infrastructure engineering, and DevOps automation. Specializing in Azure platforms, 
+                Terraform (IaC), and seamless CI/CD pipeline management.
+            </p>
         </div>
-    </header>
 
-    <main class="max-w-5xl mx-auto px-6 py-12">
-                
-        <section id="about" class="mb-20">
-            <div class="max-w-4xl">
-                <h2 class="text-2xl font-bold mb-6 leading-snug text-slate-800 border-l-4 border-blue-600 pl-4">
-                    Senior Infrastructure Engineer | Azure Cloud Engineer (Candidate) | Wintel & Hybrid Systems Specialist | BSc (Hons) Cyber Security | Veteran
-                </h2>
+        <div class="bento-card p-8 flex flex-col justify-around text-center">
+            <a href="https://linkedin.com/in/paulsmurthwaite" class="text-blue-400 hover:text-white text-3xl transition-colors"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/paulsmurthwaite" class="text-blue-400 hover:text-white text-3xl transition-colors"><i class="fab fa-github"></i></a>
+            <a href="mailto:your-email@example.com" class="text-blue-400 hover:text-white text-3xl transition-colors"><i class="fas fa-envelope"></i></a>
+            <p class="text-xs uppercase tracking-widest text-slate-500 mt-4 font-bold">Connect</p>
+        </div>
 
-                <div class="text-lg text-slate-600 leading-relaxed space-y-6">
-                    <p>
-                        Technical leader with extensive experience implementing, securing, and optimising enterprise-scale infrastructure. Career progression from hands-on systems engineering and business ownership to directing 24/7 operations for mission-critical estates.
-                    </p>
+        <div class="md:col-span-1 bento-card p-6">
+            <h3 class="text-blue-400 font-bold mb-4 flex items-center"><i class="fas fa-microchip mr-2"></i> Tech Stack</h3>
+            <div class="flex flex-wrap gap-2 text-sm">
+                <span class="bg-blue-900/40 text-blue-200 px-3 py-1 rounded-full">Azure</span>
+                <span class="bg-blue-900/40 text-blue-200 px-3 py-1 rounded-full">Terraform</span>
+                <span class="bg-blue-900/40 text-blue-200 px-3 py-1 rounded-full">GitHub Actions</span>
+                <span class="bg-blue-900/40 text-blue-200 px-3 py-1 rounded-full">PowerShell</span>
+                <span class="bg-blue-900/40 text-blue-200 px-3 py-1 rounded-full">Kubernetes</span>
+                <span class="bg-blue-900/40 text-blue-200 px-3 py-1 rounded-full">Docker</span>
+            </div>
+        </div>
 
-                    <p>
-                        Committed to ethical standards and accountability. Expert in ensuring technical delivery meets specification and budget requirements while maintaining operational speed. Proven track record in streamlining operations and resource allocation, automating workflows, and maintaining standards compliance.
-                    </p>
-
-                    <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
-                        <h3 class="text-xl font-bold mb-4 text-blue-600">Core Expertise:</h3>
-                        <ul class="list-none space-y-3 text-slate-700">
-                            <li class="flex items-start">
-                                <span class="text-blue-500 mr-2">●</span>
-                                <span><strong>Hybrid Infrastructure:</strong> Expert-level oversight of Wintel, *NIX (RHEL/SLES), and VMware vSphere environments.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-blue-500 mr-2">●</span>
-                                <span><strong>Operational Scale:</strong> Managed diverse portfolios for CNI clients including the Ministry of Defence, EDF Energy, and Heathrow Airport.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-blue-500 mr-2">●</span>
-                                <span><strong>Data & Automation:</strong> Driving efficiency through Power Query (M), Runbook Automation (RBA), and process optimisation.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-blue-500 mr-2">●</span>
-                                <span><strong>Governance & Security:</strong> Experienced in ITIL-aligned Operations Delivery, Service Improvement, Service Transition (Project-to-Run), and Risk/Compliance within security-cleared environments.</span>
-                            </li>
-                        </ul>
+        <div class="md:col-span-3 bento-card p-8">
+            <h3 class="text-blue-400 font-bold mb-6 text-xl">Work Experience</h3>
+            <div class="space-y-8">
+                <div>
+                    <div class="flex justify-between items-start mb-1">
+                        <h4 class="font-bold text-lg">Cloud Engineer (Platform)</h4>
+                        <span class="text-sm text-slate-500">Present</span>
                     </div>
-
-                    <p class="font-medium text-slate-800 italic">
-                        Currently focused on transitioning to Azure Hybrid Cloud, integrating established infrastructure experience with modern cloud-native implementation and automation techniques.
-                    </p>
+                    <p class="text-slate-400 text-sm mb-2 italic">Infrastructure & Platform Services</p>
+                    <p class="text-slate-300 text-sm leading-relaxed">Designing and managing secure, scalable Azure cloud solutions using Terraform. Lead on CI/CD pipeline optimization and automation for platform consistency.</p>
                 </div>
-                
-                <div class="flex gap-4 mt-8">
-                    <span class="bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-bold shadow-sm">Azure Cloud Engineer (Candidate)</span>
-                    <span class="bg-slate-800 text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-sm">Hybrid Infrastructure Expert</span>
+                <div class="border-l border-blue-900/50 pl-4">
+                    <div class="flex justify-between items-start mb-1">
+                        <h4 class="font-bold text-lg">Infrastructure Engineer</h4>
+                        <span class="text-sm text-slate-500">2021 - 2023</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">Transitioned traditional on-prem workloads to Azure. Focused on high-availability and disaster recovery planning.</p>
+                </div>
+                <div class="border-l border-blue-900/50 pl-4">
+                    <h4 class="font-bold text-lg">Service Desk Analyst</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">Resolved complex technical issues while maintaining high SLA standards and improving internal documentation.</p>
                 </div>
             </div>
-        </section>
-        
-        <section id="experience" class="mb-20">
-            <h3 class="text-2xl font-bold mb-8 border-b pb-2">Experience & Transition</h3>
-            <div class="space-y-12">
-        
-                <div class="flex flex-col md:flex-row gap-8">
-                    <div class="md:w-1/4">
-                        <p class="text-slate-500 font-bold sticky top-24">September 2025 — Present</p>
-                    </div>
-                    <div class="md:w-3/4">
-                        <h4 class="text-xl font-bold text-slate-900">Azure & Cloud Infrastructure Engineer (Technical R&D)</h4>
-                        <ul class="mt-4 list-disc list-outside ml-5 space-y-3 text-slate-700">
-                            <li><strong>Hybrid Cloud:</strong> Architect and implement the integration of legacy on-premises Windows Server and Linux environments with Azure Cloud services; leveraging Azure Arc to extend Azure management, governance, and security across distributed hybrid estates.</li>
-                            <li><strong>Azure Modernisation:</strong> Developing expertise across the Azure infrastructure curricula, simulating the migration of enterprise-scale on-premises workloads to Azure-native solutions.</li>
-                            <li><strong>Infrastructure as Code (IaC):</strong> Leveraging Terraform and PowerShell to automate the deployment and configuration of hybrid cloud resources, ensuring consistency and scalability.</li>
-                            <li><strong>Architecture Design:</strong> Bridging extensive infrastructure delivery experience with modern cloud design patterns to provide high-availability and cost-optimised digital services.</li>
-                        </ul>
-                    </div>
-                </div>
-        
-                <div class="flex flex-col md:flex-row gap-8 border-t pt-8">
-                    <div class="md:w-1/4">
-                        <p class="text-slate-500 font-bold sticky top-24">October 2019 — September 2025</p>
-                        <p class="text-green-600 font-bold mt-2">First Class Honours</p>
-                    </div>
-                    <div class="md:w-3/4">
-                        <h4 class="text-xl font-bold text-slate-900">BSc (Hons) Cyber Security University Student</h4>
-                        <div class="mt-4 text-slate-700 space-y-4">
-                            <ul class="list-disc list-outside ml-5 space-y-3">
-                                <li><strong>BSc (Hons) Cyber Security, focused on developing expertise in:</strong>
-                                    <ul class="list-[circle] ml-5 mt-2 space-y-2 opacity-90 text-sm">
-                                        <li>Communications Technologies and Web Technologies: Developed expertise in Communication and Web Technologies, including Cisco Switching, Routing, Wireless Networking, and Enterprise Networking & Automation.</li>
-                                        <li>Information Security Governance, Risk, and Compliance: Focused on Information Security Governance, Risk, and Compliance (GRC), aligning technical controls with organisational security frameworks.</li>
-                                        <li>Cyber Security, Systems Penetration Testing, and Network Security: Specialised in Systems Penetration Testing, Network Security, and Cyber Security methodologies to identify and mitigate infrastructure vulnerabilities.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Final Year Project: Advancing Wireless Network Security: A Modern Toolkit for SMEs and IT Professionals</strong>
-                                    <ul class="list-[circle] ml-5 mt-2 space-y-2 opacity-90 text-sm">
-                                        <li>Objective: Designed a modern security toolkit for SME and IT professionals focused on wireless assessment and detection.</li>
-                                        <li>Development: Built a modular CLI toolkit utilizing Bash & Python to automate security workflows.</li>
-                                        <li>Methodology: Integrated ethical, evidence-driven design practices with virtual lab configurations and open-source tool orchestration.</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-        
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="bg-slate-900 text-white py-12">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <p>© 2026 Paul Smurthwaite | Hosted on Azure</p>
         </div>
+
+        <div class="md:col-span-2 bento-card p-6">
+            <h3 class="text-blue-400 font-bold mb-4 flex items-center"><i class="fas fa-certificate mr-2"></i> Certifications</h3>
+            <ul class="text-sm space-y-3 text-slate-300">
+                <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> AZ-104: Azure Administrator</li>
+                <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> AZ-400: Azure DevOps Engineer</li>
+                <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Terraform Associate (HashiCorp)</li>
+            </ul>
+        </div>
+
+        <div class="md:col-span-2 bento-card p-6 bg-gradient-to-br from-blue-900/20 to-transparent">
+            <h3 class="text-blue-400 font-bold mb-2">Cloud Resume Project</h3>
+            <p class="text-sm text-slate-300 mb-4">You are looking at it. Built with HTML5, Tailwind CSS, and hosted via Azure Static Web Apps using GitHub Actions for CI/CD.</p>
+            <a href="https://github.com/paulsmurthwaite/cloud-resume" class="text-xs font-bold uppercase text-blue-400 hover:underline">View Source Code →</a>
+        </div>
+
+    </div>
+
+    <footer class="mt-12 text-center text-slate-600 text-sm italic">
+        Powered by Azure Static Web Apps & GitHub Actions
     </footer>
 
 </body>
