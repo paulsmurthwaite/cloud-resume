@@ -4,96 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paul Smurthwaite | Cloud & Infrastructure Engineer</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-    <style>
-        :root { --pico-font-size: 16px; }
-        header.cv-header { text-align: center; padding: 3rem 0; }
-        .links { margin-top: 1rem; }
-        /* Keeping your article spacing clean */
-        .job-entry header { background: #f8f9fa; padding: 1rem; margin: -1rem -1rem 1rem -1rem; border-radius: 8px 8px 0 0; }
-        h2 { border-bottom: 2px solid var(--pico-primary); padding-bottom: 0.5rem; }
-        ul ul { margin-top: 0.5rem; margin-bottom: 0.5rem; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+    <div class="container">
+        <header class="header">
+            <div class="header-info">
+                <h1>Paul Smurthwaite</h1>
+                <p class="tagline">Senior Infrastructure Engineer | Azure Cloud Engineer | Wintel & Hybrid Systems Specialist | BSc (Hons) Cyber Security | Veteran</p>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/paulsmurthwaite/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/paulsmurthwaite" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="/assets/cv.pdf"><i class="fas fa-file-pdf"></i></a>
+                </div>
+            </div>
+        </header>
 
-    <header class="container cv-header">
-        <hgroup>
-            <h1>Paul Smurthwaite</h1>
-            <p>Senior Infrastructure Engineer | Azure Cloud Engineer | Wintel & Hybrid Systems Specialist | BSc (Hons) Cyber Security | Veteran</p>
-        </hgroup>
-        <div class="links">
-            <a href="https://www.linkedin.com/in/paulsmurthwaite/" target="_blank" class="contrast">LinkedIn</a> | 
-            <a href="https://github.com/paulsmurthwaite" target="_blank" class="contrast">GitHub</a> | 
-            <a href="/assets/cv.pdf" class="contrast">Download PDF</a>
-        </div>
-    </header>
-
-    <main class="container">
-        <section>
-            <h2>Professional Profile</h2>
-            <p style="white-space: pre-wrap;">Technical leader with extensive experience implementing, securing, and optimising enterprise-scale infrastructure. Career progression from hands-on systems engineering and business ownership to directing 24/7 operations for mission-critical estates.
-                
+        <main class="resume-content">
+            <section class="resume-section">
+                <div class="section-header">Professional Profile</div>
+                <div class="section-body">
+                    <p style="white-space: pre-wrap;">Technical leader with extensive experience implementing, securing, and optimising enterprise-scale infrastructure. Career progression from hands-on systems engineering and business ownership to directing 24/7 operations for mission-critical estates.
+                        
 Currently focused on transitioning to Azure Hybrid Cloud, integrating established infrastructure experience with modern cloud-native implementation and automation techniques.</p>
-        </section>
+                </div>
+            </section>
 
-        <section>
-            <h2>Technical Skills</h2>
-            <ul>
-                <li><strong>Cloud: </strong>Microsoft Azure</li>
-                <li><strong>IaC: </strong>Terraform; Bicep; ARM Templates</li>
-                <li><strong>DevOps: </strong>GitHub Actions</li>
-                <li><strong>Legacy/Hybrid: </strong>Windows Server 2000-2022, Active Directory, Group Policy, Hyper-V, TCP/IP</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Professional Experience</h2>
-            
-            <article class="job-entry">
-                <header>
-                    <hgroup>
-                        <h3>Azure & Cloud Infrastructure Engineer (Transitioning)</h3>
-                        <p><strong>Self-Directed</strong> | Forres | Sept 2025 - Present</p>
-                    </hgroup>
-                </header>
-                <ul>
-                    <li>Hybrid Cloud: Architect and implement the integration of legacy on-premises Windows Server and Linux environments with Azure Cloud services; leveraging Azure Arc to extend Azure management, governance, and security across distributed hybrid estates.</li>
-                    <li>Azure Modernisation: Developing expertise across the Azure infrastructure curricula, simulating the migration of enterprise-scale on-premises workloads to Azure-native solutions.</li>
-                    <li>Infrastructure as Code (IaC): Leveraging Terraform and PowerShell to automate the deployment and configuration of hybrid cloud resources, ensuring consistency and scalability.</li>
-                    <li>Architecture Design: Bridging extensive infrastructure delivery experience with modern cloud design patterns to provide high-availability and cost-optimised digital services.</li>
-                </ul>
-            </article>
-
-            <article class="job-entry">
-                <header>
-                    <hgroup>
-                        <h3>BSc (Hons) Cyber Security University Student</h3>
-                        <p><strong>The Open University</strong> | Remote | 2019 - 2025</p>
-                    </hgroup>
-                </header>
-                <ul>
-                    <li>BSc (Hons) Cyber Security, focused on developing expertise in areas such as:</li>
-                    <ul>
-                        <li>Communications Technologies and Web Technologies: Developed expertise in Communication and Web Technologies, including Cisco Switching, Routing, Wireless Networking, and Enterprise Networking & Automation.</li>
-                        <li>Information Security Governance, Risk, and Compliance: Focused on Information Security Governance, Risk, and Compliance (GRC), aligning technical controls with organisational security frameworks.</li>
-                        <li>Cyber Security, Systems Penetration Testing, and Network Security: Specialised in Systems Penetration Testing, Network Security, and Cyber Security methodologies to identify and mitigate infrastructure vulnerabilities.</li>
+            <section class="resume-section">
+                <div class="section-header">Technical Skills</div>
+                <div class="section-body">
+                    <ul class="skills-list">
+                        <li><strong>Cloud: </strong>Microsoft Azure</li>
+                        <li><strong>IaC: </strong>Terraform; Bicep; ARM Templates</li>
+                        <li><strong>DevOps: </strong>GitHub Actions</li>
+                        <li><strong>Legacy/Hybrid: </strong>Windows Server 2000-2022, Active Directory, Group Policy, Hyper-V, TCP/IP</li>
                     </ul>
-                    <li>Final Year Project: Advancing Wireless Network Security: A Modern Toolkit for SMEs and IT Professionals</li>
-                    <ul>
-                        <li>Objective: Designed a modern security toolkit for SME and IT professionals focused on wireless assessment and detection.</li>
-                        <li>Development: Built a modular CLI toolkit utilizing Bash & Python to automate security workflows.</li>
-                        <li>Methodology: Integrated ethical, evidence-driven design practices with virtual lab configurations and open-source tool orchestration.</li>
-                    </ul>
-                    <li>Result: BSc (Honours) Cyber Security with First Class Honours.</li>
-                </ul>
-            </article>
-        </section>
-    </main>
+                </div>
+            </section>
 
-    <footer class="container">
-        <small><center>Paul Smurthwaite • Hosted on Azure Static Web Apps</center></small>
-    </footer>
+            <section class="resume-section">
+                <div class="section-header">Experience</div>
+                <div class="section-body">
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <span class="job-title">Azure & Cloud Infrastructure Engineer (Transitioning)</span>
+                            <span class="job-date">Sept 2025 - Present</span>
+                        </div>
+                        <div class="job-company">Self-Directed | Forres</div>
+                        <ul class="job-details">
+                            <li>Hybrid Cloud: Architect and implement the integration of legacy on-premises Windows Server and Linux environments with Azure Cloud services; leveraging Azure Arc to extend Azure management, governance, and security across distributed hybrid estates.</li>
+                            <li>Azure Modernisation: Developing expertise across the Azure infrastructure curricula, simulating the migration of enterprise-scale on-premises workloads to Azure-native solutions.</li>
+                            <li>Infrastructure as Code (IaC): Leveraging Terraform and PowerShell to automate the deployment and configuration of hybrid cloud resources, ensuring consistency and scalability.</li>
+                            <li>Architecture Design: Bridging extensive infrastructure delivery experience with modern cloud design patterns to provide high-availability and cost-optimised digital services.</li>
+                        </ul>
+                    </div>
 
+                    <div class="job">
+                        <div class="job-header">
+                            <span class="job-title">BSc (Hons) Cyber Security University Student</span>
+                            <span class="job-date">2019 - 2025</span>
+                        </div>
+                        <div class="job-company">The Open University | Remote</div>
+                        <ul class="job-details">
+                            <li>BSc (Hons) Cyber Security, focused on developing expertise in areas such as:
+                                <ul>
+                                    <li>Communications Technologies and Web Technologies: Developed expertise in Communication and Web Technologies, including Cisco Switching, Routing, Wireless Networking, and Enterprise Networking & Automation.</li>
+                                    <li>Information Security Governance, Risk, and Compliance: Focused on Information Security Governance, Risk, and Compliance (GRC), aligning technical controls with organisational security frameworks.</li>
+                                    <li>Cyber Security, Systems Penetration Testing, and Network Security: Specialised in Systems Penetration Testing, Network Security, and Cyber Security methodologies to identify and mitigate infrastructure vulnerabilities.</li>
+                                </ul>
+                            </li>
+                            <li>Final Year Project: Advancing Wireless Network Security: A Modern Toolkit for SMEs and IT Professionals
+                                <ul>
+                                    <li>Objective: Designed a modern security toolkit for SME and IT professionals focused on wireless assessment and detection.</li>
+                                    <li>Development: Built a modular CLI toolkit utilizing Bash & Python to automate security workflows.</li>
+                                    <li>Methodology: Integrated ethical, evidence-driven design practices with virtual lab configurations and open-source tool orchestration.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Result: BSc (Honours) Cyber Security with First Class Honours.</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
