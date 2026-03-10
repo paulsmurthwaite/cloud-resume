@@ -3,74 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paul Smurthwaite | Cloud & Infrastructure Engineer</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Paul Smurthwaite|Infrastructure Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-    <header class="cv-header">
-        <h1>Paul Smurthwaite</h1>
-        <p class="subtitle">Senior Infrastructure Engineer | Azure Cloud Engineer | Wintel & Hybrid Systems Specialist | BSc (Hons) Cyber Security | Veteran</p>
-        <div class="links">
-            <a href="https://www.linkedin.com/in/paulsmurthwaite/" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/paulsmurthwaite" target="_blank">GitHub</a> | 
-            <a href="/assets/cv.pdf">Download PDF</a>
-        </div>
-    </header>
+    <main class="wrapper">
+        <header class="hero">
+            <div class="name-block">
+                <h1>Paul Smurthwaite</h1>
+                <span class="status-badge">#OPENTOWORK</span>
+            </div>
+            <p class="bio">
+                Senior Infrastructure Engineer | Azure Cloud Engineer (Candidate) | Wintel & Hybrid Systems Specialist | BSc (Hons) Cyber Security | Veteran
+            </p>
+        </header>
 
-    <main id="cv-container">
-        <section>
-            <h2>Professional Profile</h2>
-            <p style="white-space: pre-wrap;">Technical leader with extensive experience implementing, securing, and optimising enterprise-scale infrastructure. Career progression from hands-on systems engineering and business ownership to directing 24/7 operations for mission-critical estates.
-                
-Currently focused on transitioning to Azure Hybrid Cloud, integrating established infrastructure experience with modern cloud-native implementation and automation techniques.</p>
+        <section class="section">
+            <h2 class="section-title">Links</h2>
+            <nav class="link-grid">
+                <a href="#" class="link-card">
+                    <span class="link-label">Curriculum Vitae</span>
+                    <span class="link-arrow">↗</span>
+                </a>
+                <a href="https://github.com/paulsmurthwaite" class="link-card" target="_blank">
+                    <span class="link-label">GitHub</span>
+                    <span class="link-arrow">↗</span>
+                </a>
+                <a href="https://www.linkedin.com/in/paulsmurthwaite/" class="link-card" target="_blank">
+                    <span class="link-label">LinkedIn</span>
+                    <span class="link-arrow">↗</span>
+                </a>
+            </nav>
         </section>
 
-        <section>
-            <h2>Technical Skills</h2>
-            <ul>
-                <li><strong>Cloud: </strong>Microsoft Azure</li>
-                <li><strong>IaC: </strong>Terraform; Bicep; ARM Templates</li>
-                <li><strong>DevOps: </strong>GitHub Actions</li>
-                <li><strong>Legacy/Hybrid: </strong>Windows Server 2000-2022, Active Directory, Group Policy, Hyper-V, TCP/IP</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Professional Experience</h2>
-            
-            <article class="job-entry">
-                <h3>Azure & Cloud Infrastructure Engineer (Transitioning)</h3>
-                <p><strong>Self-Directed</strong> | Forres | Sept 2025 - Present</p>
-                <ul>
-                    <li>Hybrid Cloud: Architect and implement the integration of legacy on-premises Windows Server and Linux environments with Azure Cloud services; leveraging Azure Arc to extend Azure management, governance, and security across distributed hybrid estates.</li>
-                    <li>Azure Modernisation: Developing expertise across the Azure infrastructure curricula, simulating the migration of enterprise-scale on-premises workloads to Azure-native solutions.</li>
-                    <li>Infrastructure as Code (IaC): Leveraging Terraform and PowerShell to automate the deployment and configuration of hybrid cloud resources, ensuring consistency and scalability.</li>
-                    <li>Architecture Design: Bridging extensive infrastructure delivery experience with modern cloud design patterns to provide high-availability and cost-optimised digital services.</li>
-                </ul>
-            </article>
-
-            <article class="job-entry">
-                <h3>BSc (Hons) Cyber Security University Student</h3>
-                <p><strong>The Open University</strong> | Remote | 2019 - 2025</p>
-                <ul>
-                    <li>BSc (Hons) Cyber Security, focused on developing expertise in areas such as:</li>
-                        <ul>
-                            <li>Communications Technologies and Web Technologies: Developed expertise in Communication and Web Technologies, including Cisco Switching, Routing, Wireless Networking, and Enterprise Networking & Automation.</li>
-                            <li>Information Security Governance, Risk, and Compliance: Focused on Information Security Governance, Risk, and Compliance (GRC), aligning technical controls with organisational security frameworks.</li>
-                            <li>Cyber Security, Systems Penetration Testing, and Network Security: Specialised in Systems Penetration Testing, Network Security, and Cyber Security methodologies to identify and mitigate infrastructure vulnerabilities.</li>
-                        </ul>
-                    <li>Final Year Project: Advancing Wireless Network Security: A Modern Toolkit for SMEs and IT Professionals</li>
-                        <ul>
-                            <li>Objective: Designed a modern security toolkit for SME and IT professionals focused on wireless assessment and detection.</li>
-                            <li>Development: Built a modular CLI toolkit utilizing Bash & Python to automate security workflows.</li>
-                            <li>Methodology: Integrated ethical, evidence-driven design practices with virtual lab configurations and open-source tool orchestration.</li>
-                        </ul>
-                    <li>Result: BSc (Honours) Cyber Security with First Class Honours.</li>
-                </ul>
-            </article>
-
-            </section>
+        <footer>
+            <div class="footer-bottom">
+                <p>© 2026 — Built with FOCUS.</p>
+                <button id="theme-toggle" aria-label="Toggle Theme">
+                    <span class="sun">🌞</span>
+                    <span class="moon">🌚</span>
+                </button>
+            </div>
+        </footer>
     </main>
 
 </body>
