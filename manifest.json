@@ -1,0 +1,22 @@
+{
+  "short_name": "Paul S.",
+  "name": "Paul Smurthwaite | Infrastructure Engineer",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0a0a0a",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#0a0a0a",
+  "description": "Personal landing page for Paul Smurthwaite."
+}

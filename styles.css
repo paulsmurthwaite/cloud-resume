@@ -1,5 +1,4 @@
 :root {
-    /* Dark Mode (Default) */
     --bg: #0a0a0a;
     --text-primary: #ededed;
     --text-secondary: #a1a1a1;
@@ -10,7 +9,6 @@
 }
 
 body.light-mode {
-    /* Light Mode */
     --bg: #ffffff;
     --text-primary: #111111;
     --text-secondary: #666666;
@@ -29,11 +27,11 @@ body.light-mode {
 body {
     background-color: var(--bg);
     color: var(--text-primary);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     display: flex;
     justify-content: center;
     padding: 80px 24px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.2s ease;
 }
 
 .wrapper {
@@ -41,7 +39,9 @@ body {
     max-width: 440px;
 }
 
-.hero { margin-bottom: 48px; }
+.hero {
+    margin-bottom: 48px;
+}
 
 .name-block {
     display: flex;
@@ -50,7 +50,10 @@ body {
     margin-bottom: 16px;
 }
 
-h1 { font-size: 1.1rem; font-weight: 500; }
+h1 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
 
 .status-badge {
     font-size: 10px;
@@ -59,7 +62,6 @@ h1 { font-size: 1.1rem; font-weight: 500; }
     background: var(--status-bg);
     padding: 2px 8px;
     border-radius: 4px;
-    letter-spacing: 0.05em;
 }
 
 .bio {
@@ -73,9 +75,14 @@ h1 { font-size: 1.1rem; font-weight: 500; }
     text-transform: uppercase;
     color: var(--text-secondary);
     margin-bottom: 16px;
+    letter-spacing: 0.05em;
 }
 
-.link-grid { display: flex; flex-direction: column; gap: 8px; }
+.link-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 
 .link-card {
     display: flex;
@@ -89,25 +96,32 @@ h1 { font-size: 1.1rem; font-weight: 500; }
     transition: 0.2s;
 }
 
-.link-card:hover { background: var(--hover-bg); border-color: var(--text-secondary); }
+.link-card:hover {
+    background: var(--hover-bg);
+    border-color: var(--text-secondary);
+}
 
-.link-arrow { color: var(--text-secondary); font-size: 0.8rem; }
+.link-arrow {
+    color: var(--text-secondary);
+    opacity: 0.5;
+}
 
+/* FOOTER FIX START */
 footer {
     margin-top: 64px;
     padding-top: 24px;
     border-top: 1px solid var(--border);
+    display: flex;               /* Forces items to be flex-items */
+    justify-content: space-between; /* Pushes text left, button right */
+    align-items: center;         /* Aligns them vertically in the center */
 }
 
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+footer p {
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin: 0;                   /* Removes block-level spacing */
 }
 
-footer p { font-size: 11px; color: var(--text-secondary); }
-
-/* Toggle Button Styling */
 #theme-toggle {
     background: none;
     border: 1px solid var(--border);
@@ -117,14 +131,9 @@ footer p { font-size: 11px; color: var(--text-secondary); }
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.2s;
 }
+/* FOOTER FIX END */
 
-#theme-toggle:hover { background: var(--hover-bg); }
-
-/* Show/Hide icons based on mode */
 .sun { display: none; }
-.moon { display: block; font-size: 14px; }
-
-body.light-mode .sun { display: block; font-size: 14px; }
+body.light-mode .sun { display: inline; }
 body.light-mode .moon { display: none; }
