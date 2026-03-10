@@ -106,20 +106,43 @@ h1 {
     opacity: 0.5;
 }
 
-/* FOOTER FIX START */
 footer {
     margin-top: 64px;
     padding-top: 24px;
     border-top: 1px solid var(--border);
-    display: flex;               /* Forces items to be flex-items */
-    justify-content: space-between; /* Pushes text left, button right */
-    align-items: center;         /* Aligns them vertically in the center */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Keeps the button aligned with the bottom line of text */
+    width: 100%;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    /* This ensures everything inside this div stays pinned left */
+    align-items: flex-start; 
+    justify-content: flex-start;
+    text-align: left;
 }
 
 footer p {
     font-size: 11px;
     color: var(--text-secondary);
-    margin: 0;                   /* Removes block-level spacing */
+    margin: 0 !important; /* Force removal of any inherited margins */
+    padding: 0;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.last-updated {
+    font-size: 9px;
+    color: var(--text-secondary);
+    opacity: 0.6;
+    font-family: "SF Mono", "JetBrains Mono", monospace; 
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block; /* Forces it to a new line even if the parent fails */
 }
 
 #theme-toggle {
@@ -131,8 +154,9 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;              /* Prevents the button from being squashed */
+    margin-left: 20px;           /* Minimum gap between text and button */
 }
-/* FOOTER FIX END */
 
 .sun { display: none; }
 body.light-mode .sun { display: inline; }

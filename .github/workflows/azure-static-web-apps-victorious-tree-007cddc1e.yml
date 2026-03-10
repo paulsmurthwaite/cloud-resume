@@ -16,6 +16,13 @@ jobs:
     name: Build and Deploy Job
     steps:
       - uses: actions/checkout@v3
+
+      - name: Stamp Deployment Date
+        run: |
+          # Get current date (e.g., Mar 10, 2026)
+          DEPLOY_DATE=$(date +'%b %d, %Y')
+          # Replace the placeholder in index.html
+          sed -i "s/March 10, 2026/$DEPLOY_DATE/g" index.html
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
