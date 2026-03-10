@@ -1,4 +1,4 @@
-# ☁️ Cloud Resume Challenge: Infrastructure Optimized
+# Cloud Resume
 
 [![Portfolio Site](https://img.shields.io/badge/Live-dciphr.co.uk-4ade80?style=flat-square)](https://www.dciphr.co.uk/)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-4ade80.svg?style=flat-square)](https://github.com/paulsmurthwaite/cloud-resume/graphs/commit-activity)
