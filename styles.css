@@ -186,6 +186,12 @@ h1 {
     letter-spacing: 0.5px;
 }
 
+.footer-copyright p {
+    font-style: normal;
+    color: var(--footer-text);
+    font-size: 11px; /* Matches your current footer style */
+}
+
 /* --- Link Buttons --- */
 .link-grid {
     display: flex;
