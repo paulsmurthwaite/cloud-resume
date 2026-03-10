@@ -20,7 +20,7 @@ jobs:
       - name: Stamp Deployment Date
         run: |
           # Get current date (e.g., Mar 10, 2026)
-          DEPLOY_DATE=$(date +'%b %d, %Y')
+          DEPLOY_DATE=$(date +'%d-%m-%Y')
           # Replace the placeholder in index.html
           sed -i "s/March 10, 2026/$DEPLOY_DATE/g" index.html
       - name: Build And Deploy
