@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paul Smurthwaite | Infrastructure Engineer</title>
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+    <meta name="description" content="Portfolio of Paul Smurthwaite, Senior Infrastructure & Azure Cloud Engineer specialising in Wintel and Hybrid Systems.">
+    
+    <meta property="og:title" content="Paul Smurthwaite | Infrastructure Engineer">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.dciphr.co.uk/">
+    <meta property="og:image" content="avatar.webp">
+
+    <link rel="preload" as="image" href="avatar.webp">
+    
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <link rel="manifest" href="/manifest.json">
@@ -16,7 +27,7 @@
         <div class="grid-row row-1">
             <div class="col-left"></div> <div class="col-right">
                 <div class="avatar-container">
-                    <img src="avatar-400x400.jpg" alt="Paul Smurthwaite" class="avatar">
+                    <img src="avatar.webp" alt="Paul Smurthwaite" class="avatar" width="110" height="110">
                 </div>
 
                 <div class="header-flex">
@@ -45,7 +56,7 @@
                 <span class="section-title">/links</span>
             </div>
             <div class="col-right">
-                <nav class="link-grid">
+                <nav class="link-grid" aria-label="Professional Links and Profiles">
                     <a href="#" class="link-card">
                         <span>Curriculum Vitae</span>
                         <span class="link-arrow">↗</span>
@@ -64,9 +75,12 @@
 
         <footer>
             <div class="footer-info">
-                <p>© 2026 — Built with FOCUS.</p>
+                <address style="font-style: normal;">
+                    <p>© 2026 — Built with FOCUS.</p>
+                </address>
                 <p class="last-updated">BUILD_REF: <span id="deploy-date">March 10, 2026</span></p>
             </div>
+
             <button id="theme-toggle" aria-label="Toggle Theme">
                 <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="12" r="5"></circle>

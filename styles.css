@@ -12,6 +12,10 @@
     --hover-bg: #1a1a1a;
     --status-bg: rgba(74, 222, 128, 0.05);
     --status-text: #4ade80;
+    --glass-gradient: linear-gradient(225deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+    --glass-hover: linear-gradient(225deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+    --sticker-border: #2a2d30;
+    --sticker-shadow: rgba(0, 0, 0, 0.3);
 }
 
 body.light-mode {
@@ -26,6 +30,10 @@ body.light-mode {
     --hover-bg: #ced1d5;
     --status-bg: #d1fae5;
     --status-text: #065f46;
+    --glass-gradient: linear-gradient(225deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0) 100%);
+    --glass-hover: linear-gradient(225deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.01) 100%);
+    --sticker-border: #caced3;
+    --sticker-shadow: rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -51,7 +59,6 @@ body {
     max-width: 560px;
 }
 
-/* --- The 3-Row Grid Engine --- */
 .main-grid {
     display: flex;
     flex-direction: column;
@@ -90,8 +97,8 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #2a2d30; 
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(225deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0 8px 24px var(--sticker-shadow);
+    background: var(--glass-gradient);
 }
 
 /* --- Typography --- */
@@ -134,7 +141,7 @@ h1 {
     align-items: center;
     gap: 8px;
     padding: 4px 10px;
-    background: linear-gradient(225deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+    background: var(--glass-gradient);
     border: 1px solid var(--label-color);
     border-radius: 20px;
     white-space: nowrap;
@@ -193,7 +200,7 @@ h1 {
     color: var(--link-text);
     font-size: 0.9rem;
     font-weight: 500;
-    background: linear-gradient(225deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+    background: var(--glass-gradient);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
@@ -202,7 +209,7 @@ h1 {
 }
 
 .link-card:hover {
-    background: linear-gradient(225deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+    background: var(--glass-gradient);
     border-color: rgba(255, 255, 255, 0.3);
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.07);
 }
@@ -229,7 +236,7 @@ footer {
 }
 
 #theme-toggle {
-    background: linear-gradient(225deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+    background: var(--glass-gradient);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 8px; 
     border-radius: 12px; 
@@ -242,7 +249,7 @@ footer {
 }
 
 #theme-toggle:hover {
-    background: linear-gradient(225deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+    background: var(--glass-gradient);
     border-color: rgba(255, 255, 255, 0.3);
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.07);
 }
@@ -281,11 +288,11 @@ footer p {
 /* --- LIGHT MODE OVERRIDES --- */
 body.light-mode .link-card {
     border: 1px solid rgba(0, 0, 0, 0.1);
-    background: linear-gradient(225deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0) 100%);
+    background: var(--glass-gradient);
 }
 
 body.light-mode .link-card:hover {
-    background: linear-gradient(225deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.01) 100%);
+    background: var(--glass-gradient);
     border-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
 }
@@ -293,16 +300,16 @@ body.light-mode .link-card:hover {
 body.light-mode .status-indicator {
     border-color: var(--label-color);
     /* Subtle depth for light mode */
-    background: linear-gradient(225deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0) 100%);
+    background: var(--glass-gradient);
 }
 
 body.light-mode #theme-toggle { 
     border: 1px solid rgba(0, 0, 0, 0.25); 
-    background: linear-gradient(225deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0) 100%);
+    background: var(--glass-gradient);
 }
 
 body.light-mode #theme-toggle:hover {
-    background: linear-gradient(225deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.01) 100%);
+    background: var(--glass-gradient);
     border-color: rgba(0, 0, 0, 0.4);
     box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.12); 
 }
@@ -310,6 +317,12 @@ body.light-mode #theme-toggle:hover {
 body.light-mode .avatar {
     border-color: #caced3;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.link-card:focus-visible, 
+#theme-toggle:focus-visible {
+    outline: 2px solid var(--status-text);
+    outline-offset: 4px;
 }
 
 /* --- Responsive --- */
