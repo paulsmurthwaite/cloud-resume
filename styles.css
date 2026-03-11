@@ -2,44 +2,46 @@
 
 :root {
     --bg: #191c1e;
-    --name-color: #f9f9f9;
     --bio-color: #868686;
-    --label-color: #565e5f;
-    --link-text: #f9f9f9;
-    --footer-text: #565e5f;
-    --status-label: #868686;
     --border: #222222;
-    --hover-bg: #1a1a1a;
-    --status-bg: rgba(74, 222, 128, 0.05);
-    --status-text: #4a90e2;
-    --status-glow: rgba(74, 144, 226, 0.35);   
+    --btn-halo: rgba(255, 255, 255, 0.15);
+    --footer-text: #565e5f;
     --glass-gradient: linear-gradient(225deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
     --glass-hover: linear-gradient(225deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
-    --sticker-border: #2a2d30;
-    --sticker-shadow: rgba(0, 0, 0, 0.3);
-    --pbd-blue: #4a90e2;
+    --hover-bg: #1a1a1a;
+    --label-color: #565e5f;
+    --link-text: #f9f9f9;
     --matrix-green: #00ff41;
+    --name-color: #f9f9f9;
+    --pbd-blue: #4a90e2;
+    --status-bg: rgba(74, 222, 128, 0.05);
+    --status-glow: rgba(74, 144, 226, 0.35);  
+    --status-label: #868686;
+    --status-text: #4a90e2;
+     --sticker-border: #2a2d30;
+    --sticker-shadow: rgba(0, 0, 0, 0.3);
 }
 
-body.light-mode {
+.light-mode {
     --bg: #dbdee2;
-    --name-color: #141414;     
-    --bio-color: #515458;      
-    --label-color: #8e888c;    
-    --link-text: #141414;      
-    --footer-text: #8e888c;    
-    --status-label: #515458;  
+    --bio-color: #515458;  
     --border: #bcbfc3;
-    --hover-bg: #ced1d5;
-    --status-bg: #d1fae5;
-    --status-text: #2d5da1;
-    --status-glow: rgba(45, 93, 161, 0.2);
+    --btn-halo: rgba(0, 0, 0, 0.15);
+    --footer-text: #8e888c;  
     --glass-gradient: linear-gradient(225deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0) 100%);
     --glass-hover: linear-gradient(225deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.01) 100%);
+    --hover-bg: #ced1d5;
+    --label-color: #8e888c;    
+    --link-text: #141414;      
+    --matrix-green: #008f11;
+    --name-color: #141414;  
+    --pbd-blue: #2d5da1;
+    --status-bg: #d1fae5;
+    --status-glow: rgba(45, 93, 161, 0.2);
+    --status-label: #515458;
+    --status-text: #2d5da1;
     --sticker-border: #caced3;
     --sticker-shadow: rgba(0, 0, 0, 0.08);
-    --pbd-blue: #2d5da1;
-    --matrix-green: #008f11;
 }
 
 * {
@@ -187,14 +189,60 @@ ul.bio li {
     margin-top: 1.25rem;
 }
 
+/* --- Base Button Convention --- */
+.download-btn, #show-more-trigger, .return-top-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 28px;
+    padding: 0 14px;
+    background: var(--glass-gradient);
+    border: 1px solid var(--sticker-border);
+    border-radius: 20px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--pbd-blue);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+}
+
+/* Unified Halo Hover Effect */
+.download-btn:hover, 
+#show-more-trigger:hover, 
+.return-top-btn:hover {
+    background: var(--glass-gradient);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 0 4px var(--btn-halo);
+    color: var(--pbd-blue);
+}
+
 .status-indicator {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 4px 10px;
     background: var(--glass-gradient);
     border: 1px solid var(--sticker-border);
     border-radius: 20px;
+}
+
+.status-text {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--pbd-blue);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.pdf-icon {
+    color: var(--pbd-blue);
+    margin-right: 2px;
 }
 
 .dot {
@@ -222,13 +270,19 @@ ul.bio li {
     100% { transform: scale(1); opacity: 0; }
 }
 
-.status-text {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 10px;
-    text-transform: uppercase;
+.return-top-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns it to the right of the bio text */
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+.return-top-btn .chevron-icon {
+    display: inline-block;
+    font-size: 14px;
+    transform: rotate(90deg); /* Points the « upwards */
     color: var(--pbd-blue);
-    font-weight: 600;
-    letter-spacing: 0.5px;
+    line-height: 1;
 }
 
 .footer-copyright p {
@@ -290,6 +344,7 @@ ul.bio li {
     position: relative;
     border: 1px solid var(--sticker-border);
     display: flex;
+    margin-top: 8px;
 }
 
 .pbd-monitor {
@@ -343,6 +398,79 @@ ul.bio li {
     line-height: 1;
 }
 
+/* --- Progressive Disclosure --- */
+
+/* Hide everything below /about by default */
+.row-education, .row-experience {
+    display: none !important;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* When expanded, show them */
+.is-expanded .row-education, .is-expanded .row-experience {
+    display: grid !important;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.col-right {
+    position: relative; /* This is the anchor */
+}
+
+.reveal-wrapper {
+    position: relative;
+    max-height:200px;
+    overflow: hidden;
+    transition: max-height 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-wrapper.is-expanded {
+    max-height: 8000px;
+}
+
+.reveal-overlay {
+    position: absolute;
+    bottom: 25px; 
+    left: 0;
+    width: 100%;
+    height: 160px; 
+    background: linear-gradient(to bottom, transparent, var(--bg) 75%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.reveal-overlay.hidden {
+    display: none;
+}
+
+#show-more-trigger {
+    position: relative;
+    pointer-events: auto;
+    z-index: 101;
+}
+
+#show-more-trigger .chevron-icon {
+    display: inline-block;
+    font-size: 14px;
+    transform: rotate(90deg); /* Points the » downwards */
+    color: var(--pbd-blue);
+    line-height: 1;
+}
+
+#show-more-trigger.collapsing {
+    transform: translateX(-100px);
+    opacity: 0;
+    filter: blur(4px);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.4s ease, 
+                filter 0.4s ease;
+}
+
 /* --- Footer & Theme Toggle --- */
 footer {
     margin-top: 16px;
@@ -356,37 +484,75 @@ footer {
 
 #theme-toggle {
     background: var(--glass-gradient);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--sticker-border);
     padding: 8px; 
-    border-radius: 12px; 
+    height: 34px;
+    width: 34px;
+    border-radius: 20px;
     cursor: pointer;
     display: flex; 
     align-items: center; 
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative; /* Added for absolute children */
+    overflow: hidden;   /* Keeps rotation clean */
     z-index: 10;
+}
+
+#theme-toggle svg {
+    position: absolute; /* Stacked on top of each other */
+    color: var(--pbd-blue);
+    stroke: currentColor;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.5s ease;
+    pointer-events: none;
 }
 
 #theme-toggle:hover {
     background: var(--glass-gradient);
     border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.07);
+    box-shadow: 0 0 0 4px var(--btn-halo); /* Now uses unified halo */
 }
 
-#theme-toggle svg {
-    color: var(--name-color);
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    pointer-events: none;
-    stroke: currentColor;
+/* Default (Dark Mode): Moon is visible, Sun is rotated away */
+.moon {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+.sun {
+    opacity: 0;
+    transform: rotate(-90deg);
 }
 
-#theme-toggle:hover svg {
-    transform: rotate(15deg) scale(1.1);
+/* Light Mode: Sun is visible, Moon is rotated away */
+.light-mode .sun {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+.light-mode .moon {
+    opacity: 0;
+    transform: rotate(-90deg);
 }
 
-.sun { display: none; }
-body.light-mode .sun { display: block; }
-body.light-mode .moon { display: none; }
+/* Hover in Dark Mode: Show Sun spinning in */
+#theme-toggle:hover .moon {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+#theme-toggle:hover .sun {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+/* Hover in Light Mode: Show Moon spinning in */
+.light-mode #theme-toggle:hover .sun {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+.light-mode #theme-toggle:hover .moon {
+    opacity: 1;
+    transform: rotate(0deg);
+}
 
 .footer-info { display: flex; flex-direction: column; gap: 4px; }
 
@@ -438,48 +604,49 @@ footer p {
 }
 
 /* --- LIGHT MODE OVERRIDES --- */
-body.light-mode .link-card {
+.light-mode .link-card {
     border: 1px solid rgba(0, 0, 0, 0.1);
     background: var(--glass-gradient);
 }
 
-body.light-mode .link-card:hover {
+.light-mode .link-card:hover {
     background: var(--glass-gradient);
     border-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
 }
 
-body.light-mode .status-indicator {
-    border-color: var(--label-color);
-    /* Subtle depth for light mode */
+/* Unified Light Mode Hover for all main buttons */
+.light-mode .download-btn:hover,
+.light-mode #show-more-trigger:hover,
+.light-mode .return-top-btn:hover,
+.light-mode #theme-toggle:hover {
     background: var(--glass-gradient);
+    border-color: rgba(0, 0, 0, 0.2); /* Unified transparency */
+    box-shadow: 0 0 0 4px var(--btn-halo);
 }
 
-body.light-mode #theme-toggle { 
-    border: 1px solid rgba(0, 0, 0, 0.25); 
-    background: var(--glass-gradient);
+/* Disable hover effects for the Availability indicator */
+.light-mode .status-indicator.download-btn[style*="cursor: default"]:hover,
+.status-indicator.download-btn[style*="cursor: default"]:hover {
+    background: var(--glass-gradient); /* Keep original background */
+    border-color: var(--sticker-border); /* Keep original border */
+    box-shadow: none; /* Remove the halo */
 }
 
-body.light-mode #theme-toggle:hover {
-    background: var(--glass-gradient);
-    border-color: rgba(0, 0, 0, 0.4);
-    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.12); 
-}
-
-body.light-mode .avatar {
+.light-mode .avatar {
     border-color: #caced3;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-body.light-mode .pbd-image {
+.light-mode .pbd-image {
     filter: grayscale(100%) brightness(1.2) contrast(0.7) opacity(0.4);
 }
 
-body.light-mode .pbd-card:hover .pbd-image {
+.light-mode .pbd-card:hover .pbd-image {
     filter: grayscale(0%) brightness(1) contrast(1) opacity(1);
 }
 
-body.light-mode .pbd-monitor {
+.light-mode .pbd-monitor {
     background: #f0f2f5;
 }
 

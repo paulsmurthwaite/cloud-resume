@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
     const btn = document.getElementById("theme-toggle");
-    const currentTheme = localStorage.getItem("theme");
+    
+    // We target the root (html) element
+    const root = document.documentElement;
 
-    // Initialize theme
-    if (currentTheme === "light") {
-        document.body.classList.add("light-mode");
-    }
-
-    // Toggle logic
-    btn.addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
-        
-        const theme = document.body.classList.contains("light-mode") 
-            ? "light" 
-            : "dark";
+    if (btn) {
+        btn.addEventListener("click", () => {
+            // Toggle the class on the root
+            root.classList.toggle("light-mode");
             
-        localStorage.setItem("theme", theme);
-    });
+            // Determine and save state
+            const isLight = root.classList.contains("light-mode");
+            localStorage.setItem("theme", isLight ? "light" : "dark");
+            
+            // Optional: Keep body in sync for any legacy styles
+            document.body.classList.toggle("light-mode", isLight);
+        });
+    }
 });
