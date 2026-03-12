@@ -146,6 +146,8 @@ h1 {
     margin-bottom: 4px;
     letter-spacing: -0.02em;
     color: var(--name-color);
+    transition: color 0.3s ease; /* Scramble */
+    min-width: 280px; /* Scramble */
 }
 
 .section-title {
