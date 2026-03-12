@@ -714,6 +714,11 @@ footer p {
     z-index: 101;
 }
 
+/* Helper class for the JavaScript scramble effect */
+.scramble-active {
+    color: var(--pbd-blue) !important;
+}
+
 /* --- Responsive --- */
 @media (max-width: 480px) {
     .grid-row { 

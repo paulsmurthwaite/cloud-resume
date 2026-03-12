@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (index < iteration) return `<span>${finalChar}</span>`;
                     
                     const randomChar = chars[Math.floor(Math.random() * chars.length)];
-                    return `<span style="color: var(--pbd-blue);">${randomChar}</span>`;
+                    return `<span class="scramble-active">${randomChar}</span>`;
                 }).join("");
 
                 if (iteration >= state1.length) clearInterval(scrambleInterval);
