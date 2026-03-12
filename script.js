@@ -17,4 +17,16 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.classList.toggle("light-mode", isLight);
         });
     }
+
+    // Back to Top Logic
+    const topBtn = document.getElementById("back-to-top");
+    if (topBtn) {
+        topBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
+
 });
