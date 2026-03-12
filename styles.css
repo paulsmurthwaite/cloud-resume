@@ -4,6 +4,7 @@
     --bg: #191c1e;
     --bio-color: #868686;
     --border: #222222;
+    --btn-hover-border-color: rgba(255, 255, 255, 0.3);
     --btn-halo: rgba(255, 255, 255, 0.15);
     --footer-text: #565e5f;
     --glass-gradient: linear-gradient(225deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
@@ -26,6 +27,7 @@
     --bg: #dbdee2;
     --bio-color: #515458;  
     --border: #bcbfc3;
+    --btn-hover-border-color: rgba(0, 0, 0, 0.2);
     --btn-halo: rgba(0, 0, 0, 0.15);
     --footer-text: #8e888c;  
     --glass-gradient: linear-gradient(225deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0) 100%);
@@ -219,7 +221,7 @@ ul.bio li {
 #show-more-trigger:hover, 
 .return-top-btn:hover {
     background: var(--glass-gradient);
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: var(--btn-hover-border-color);
     box-shadow: 0 0 0 4px var(--btn-halo);
     color: var(--pbd-blue);
 }
@@ -512,7 +514,7 @@ footer {
 
 #theme-toggle:hover {
     background: var(--glass-gradient);
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: var(--btn-hover-border-color);
     box-shadow: 0 0 0 4px var(--btn-halo); /* Now uses unified halo */
 }
 
@@ -615,16 +617,6 @@ footer p {
     background: var(--glass-gradient);
     border-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
-}
-
-/* Unified Light Mode Hover for all main buttons */
-.light-mode .download-btn:hover,
-.light-mode #show-more-trigger:hover,
-.light-mode .return-top-btn:hover,
-.light-mode #theme-toggle:hover {
-    background: var(--glass-gradient);
-    border-color: rgba(0, 0, 0, 0.2); /* Unified transparency */
-    box-shadow: 0 0 0 4px var(--btn-halo);
 }
 
 /* Disable hover effects for the Availability indicator */
