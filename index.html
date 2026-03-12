@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paul Smurthwaite | Infrastructure Engineer</title>
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-hashes' 'sha256-jed+0K9FSw23Je+x3ey2E0o6gW5QqdlXIu2Szdc9yxs='; font-src https://fonts.gstatic.com; script-src 'self' 'sha256-2lFYnhrPAu1BBRUjkfM0UYxEGrQQ5FlKekHcd6IuBAU='; img-src 'self' data:;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; img-src 'self' data:;">
 
     <meta name="description" content="Portfolio of Paul Smurthwaite, Senior Infrastructure & Azure Cloud Engineer specialising in Wintel and Hybrid Systems.">
     
@@ -14,17 +14,10 @@
     <meta property="og:url" content="https://www.dciphr.co.uk/">
     <meta property="og:image" content="avatar.webp">
 
-    <link rel="preload" as="image" href="avatar.webp">
-    
-    <script>
-        // Sync on page load
-        if (localStorage.getItem("theme") === "light") {
-            document.documentElement.classList.add("light-mode");
-        }
-    </script>
-
-    <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" defer></script>
+
+    <link rel="preload" as="image" href="avatar.webp">
+    <link rel="stylesheet" href="styles.css">
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <meta name="theme-color" content="#0a0a0a">
@@ -43,7 +36,7 @@
 
                 <div class="header-flex">
                     <h1 id="brand-name" data-value="dciphr.co.uk">Paul Smurthwaite</h1>
-                    <div class="status-indicator download-btn" style="cursor: default;">
+                    <div class="status-indicator download-btn">
                         <span class="dot"></span>
                         <span class="status-text">Available</span>
                     </div>

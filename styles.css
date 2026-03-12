@@ -214,6 +214,7 @@ ul.bio li {
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     white-space: nowrap;
+    cursor: default;
 }
 
 /* Unified Halo Hover Effect */
@@ -233,6 +234,7 @@ ul.bio li {
     background: var(--glass-gradient);
     border: 1px solid var(--sticker-border);
     border-radius: 20px;
+    cursor: default;
 }
 
 .status-text {
