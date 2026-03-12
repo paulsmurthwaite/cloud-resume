@@ -1,18 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Estimate current distance (Voyager 1 moves at ~17 km/s)
-    const launchDate = new Date("1977-09-05");
+    // This calculation is an estimate based on the "Pale Blue Dot" photo.
+    // Base distance: 6.4 billion km on Feb 14, 1990.
+    const baseDistanceKm = 6400000000;
+    const baseDate = new Date("1990-02-14T00:00:00Z");
+    
+    // Current time
     const now = new Date();
     
-    // Calculate hours elapsed since launch
-    const hoursSinceLaunch = (now - launchDate) / (1000 * 60 * 60);
+    // Calculate hours elapsed since the base date in 1990.
+    const hoursSinceBaseDate = (now - baseDate) / (1000 * 60 * 60);
     
-    // 6.4bn km was the 1990 distance. 
-    // Voyager 1 currently adds roughly 61,200 km per hour.
-    const distanceKM = 6400000000 + (hoursSinceLaunch * 61200); 
+    // Voyager 1's approximate speed is 17 km/s, which is ~61,200 km/h.
+    const speedKmh = 61200;
+    
+    // Calculate the new distance by adding the distance travelled since 1990.
+    const currentDistanceKm = baseDistanceKm + (hoursSinceBaseDate * speedKmh);
     
     const coordElement = document.querySelector('.pbd-coord');
     
     if (coordElement) {
-        coordElement.innerText = `${(distanceKM / 1000000000).toFixed(2)}bn km`;
+        // Display the result in billions of km, rounded to two decimal places.
+        coordElement.innerText = `${(currentDistanceKm / 1000000000).toFixed(2)}bn km`;
     }
 });
