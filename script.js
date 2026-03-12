@@ -1,20 +1,27 @@
+// 1. Define the sync function OUTSIDE the wrapper so it's globally accessible
+const root = document.documentElement;
+const syncTheme = () => {
+    // The inline script in the HTML head handles the initial load.
+    // This function is for subsequent changes (clicks, other tabs).
+    const isLight = localStorage.getItem("theme") === "light";
+    root.classList.toggle("light-mode", isLight);
+};
+
+// 3. Listen for navigation and external changes
+window.addEventListener("pageshow", syncTheme);
+window.addEventListener("storage", (e) => {
+    if (e.key === "theme") syncTheme();
+});
+
+// 4. Wrap ONLY the button listeners in DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
     const btn = document.getElementById("theme-toggle");
     
-    // We target the root (html) element
-    const root = document.documentElement;
-
     if (btn) {
         btn.addEventListener("click", () => {
-            // Toggle the class on the root
-            root.classList.toggle("light-mode");
-            
-            // Determine and save state
-            const isLight = root.classList.contains("light-mode");
-            localStorage.setItem("theme", isLight ? "light" : "dark");
-            
-            // Optional: Keep body in sync for any legacy styles
-            document.body.classList.toggle("light-mode", isLight);
+            const newTheme = root.classList.contains("light-mode") ? "dark" : "light";
+            localStorage.setItem("theme", newTheme);
+            syncTheme();
         });
     }
 
@@ -22,11 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const topBtn = document.getElementById("back-to-top");
     if (topBtn) {
         topBtn.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+            window.scrollTo({ top: 0, behavior: "smooth" });
         });
     }
-
 });
