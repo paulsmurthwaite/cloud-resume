@@ -19,7 +19,7 @@ window.addEventListener("storage", (e) => {
 });
 
 // ==========================================
-// 2. INITIALIZATION WRAPPER
+// 2. INITIALISATION WRAPPER
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
 

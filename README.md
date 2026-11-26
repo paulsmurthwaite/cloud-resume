@@ -18,7 +18,7 @@ A professional landing page and serverless cloud resume built with a focus on be
 ### Performance Optimisation
 * **Asset Compression**: Migrated hero assets to **WebP**, reducing the primary payload from ~100KB to **12KB** while maintaining high pixel density (4x) for Retina displays.
 * **Zero Layout Shift**: Defined explicit image dimensions and preloading hints in the document `<head>` to achieve a near-perfect Cumulative Layout Shift (CLS) score.
-* **Vector Optimization**: Utilized SVGOMG to strip unnecessary XML metadata and editor-specific layers from vector assets.
+* **Vector Optimisation**: Utilised SVGOMG to strip unnecessary XML metadata and editor-specific layers from vector assets.
 
 ### Security Hardening
 * **Content Security Policy (CSP)**: Implemented a strict CSP meta-tag to enforce the principle of least privilege, allowing only trusted sources for styles, fonts, and images.
